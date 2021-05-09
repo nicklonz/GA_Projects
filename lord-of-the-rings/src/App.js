@@ -11,7 +11,9 @@ class App extends Component {
         title={movie.title}
         hours={movie.hours}
         minutes={movie.minutes}
-        total={movie.total}
+        totalmin={movie.hours*60+movie.minutes}
+        totalsec={movie.hours*3600+movie.minutes*60}
+
         tomato={movie.tomato}
         key={index}
       />
