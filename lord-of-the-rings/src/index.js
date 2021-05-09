@@ -8,20 +8,20 @@ import reportWebVitals from './reportWebVitals';
           {
             title: "The Fellowship of the Ring",
             hours: 2,
-            minutes: 58
-            //tomato: 95
+            minutes: 58,
+            tomato: 95
           },
           {
             title: "The Two Towers",
             hours: 2,
-            minutes: 59
-            //tomato: 93
+            minutes: 59,
+            tomato: 93
           },
           {
             title: "The Return of the King",
             hours: 3,
-            minutes: 21
-            //tomato: 91
+            minutes: 21,
+            tomato: 91
           }
         ]
 

@@ -6,8 +6,6 @@ import Movie from './Movie.js';
 class App extends Component {
   render() {
 
-
-    
     let allMovies = this.props.movies.map((movie, index) =>
       <Movie
         title={movie.title}
