@@ -7,14 +7,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Nick's Movie React Demo Project</h2>
+        <div> 
+          <h2>Welcome to Nick's Movie Demo Page</h2>
         </div>
-        <p className="App-intro">
-          This is where it all gets started.
-        </p>
-        <Movie></Movie>
+        
+        <Movie title="The Fellowship of the Ring" hours="2" minutes="58"></Movie>
+        <Movie title="The Two Towers" hours="2" minutes="59"></Movie>
+        <Movie title="The Return of the King" hours="3" minutes="21"></Movie>
+
       </div>
     )
   }
