@@ -5,16 +5,25 @@ import Movie from './Movie.js';
 
 class App extends Component {
   render() {
+
+
+    
+    let allMovies = this.props.movies.map((movie, index) =>
+      <Movie
+        title={movie.title}
+        hours={movie.hours}
+        minutes={movie.minutes}
+        total={movie.total}
+        tomato={movie.tomato}
+        key={index}
+      />
+    )
     return (
       <div className="App">
         <div> 
           <h2>Welcome to Nick's Movie Demo Page</h2>
         </div>
-        
-        <Movie title="The Fellowship of the Ring" hours="2" minutes="58"></Movie>
-        <Movie title="The Two Towers" hours="2" minutes="59"></Movie>
-        <Movie title="The Return of the King" hours="3" minutes="21"></Movie>
-
+    {allMovies}
       </div>
     )
   }

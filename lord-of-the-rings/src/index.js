@@ -4,10 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+        let movies = [
+          {
+            title: "The Fellowship of the Ring",
+            hours: 2,
+            minutes: 58
+            //tomato: 95
+          },
+          {
+            title: "The Two Towers",
+            hours: 2,
+            minutes: 59
+            //tomato: 93
+          },
+          {
+            title: "The Return of the King",
+            hours: 3,
+            minutes: 21
+            //tomato: 91
+          }
+        ]
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App movies={movies} />,
   document.getElementById('root')
 );
 
