@@ -1,12 +1,45 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import App from './components/App';
+import NotFound from './components/NotFound';
+
+import registerServiceWorker from './registerServiceWorker';
+
+import './css/bootstrap.min.css';
+import './css/font-awesome.min.css';
+import './css/style.css';
+
+/*
+ fonts Import here
+*/
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Karla', 'Lato', 'Open Sans', 'Roboto', 'sans-serif']
+  }
+});
+
+
+
+/*
+STateless Router Components Setup
+*/
+
+const Root = () => {
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={App} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </Router>
+  )
+}
+render(<Root />, document.querySelector('#root'));
+registerServiceWorker();
