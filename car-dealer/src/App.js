@@ -19,6 +19,7 @@ class App extends Component {
       <div className="App">
         <h1>Car Dealer</h1>
         <Inventory
+          username={this.state.username}
           availableCars={this.state.availableCars.sort()}
         />
       </div>
