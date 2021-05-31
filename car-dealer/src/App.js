@@ -11,9 +11,10 @@ class App extends Component {
 
       carSale: "Junk Heap",
       editable: true,
-      discount: 10,
+      featurePrice: 5000,
+      discount: 1000,
       username: "Mr. Customer",
-      availableCars: ["XYZ Auto","Alpha Romeo", "Creep Jeep","Mercedes", "BMW", "Junk Heap", "Whatever", "Tesla"]
+      availableCars: ["XYZ Auto","Rust Bucket","Alpha Romeo", "Creep Jeep","Mercedes", "BMW", "Junk Heap", "Whatever", "Tesla"]
     }
   }
 
@@ -39,6 +40,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Car Dealer</h1>
+        <h2>Potential Customers: API</h2>
         <Inventory
           username={this.state.username}
           carSale={this.state.carSale}
@@ -48,6 +50,9 @@ class App extends Component {
           discount={this.state.discount}
           adjustDiscount={this.adjustDiscount}
           handleItemChange={this.handleItemChange}
+          featurePrice={this.state.featurePrice}
+          totalPrice={this.state.featurePrice-this.state.discount}
+
         />
       </div>
     );
