@@ -11,14 +11,20 @@ class App extends Component {
 
       carSale: "Junk Heap",
       editable: true,
-      featurePrice: 5000,
-      discount: 1000,
+      featurePrice: 5500,
+      discount: 500,
       username: "Mr. Customer",
       availableCars: ["XYZ Auto","Rust Bucket","Alpha Romeo", "Creep Jeep","Mercedes", "BMW", "Junk Heap", "Whatever", "Tesla"]
     }
   }
 
   toggleEditCarSpecial = () => {
+    this.setState({
+      editable: !this.state.editable
+    })
+  }
+
+  toggleEditPriceSpecial = () => {
     this.setState({
       editable: !this.state.editable
     })
@@ -36,6 +42,12 @@ class App extends Component {
     })
   }
 
+  handlePriceChange = (event) => {
+    this.setState({
+      featurePrice: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -46,10 +58,12 @@ class App extends Component {
           carSale={this.state.carSale}
           editable={this.state.editable}
           toggleEditCarSpecial={this.toggleEditCarSpecial}
+          toggleEditPriceSpecial={this.toggleEditPriceSpecial}
           availableCars={this.state.availableCars.sort()}
           discount={this.state.discount}
           adjustDiscount={this.adjustDiscount}
           handleItemChange={this.handleItemChange}
+          handlePriceChange={this.handlePriceChange}
           featurePrice={this.state.featurePrice}
           totalPrice={this.state.featurePrice-this.state.discount}
 

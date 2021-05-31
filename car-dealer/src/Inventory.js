@@ -9,7 +9,7 @@ const Inventory = (props) => {
       <h3>Buy it now for ${props.totalPrice.toLocaleString()}</h3>
       <button
         onClick={props.toggleEditCarSpecial}
-      >{props.editable ? "Complete" : "Edit Car Special"}</button>
+      >{props.editable ? "Car Completed" : "Edit Car Special"}</button>
       { props.editable && (
       <div>
         <input 
@@ -19,6 +19,21 @@ const Inventory = (props) => {
         />
           <button onClick={() => props.adjustDiscount(100)}>+</button>
           <button onClick={() => props.adjustDiscount(-100)}>-</button>
+        <br></br>
+        <br></br>
+          <button
+            onClick={props.toggleEditPriceSpecial}
+          >{props.editable ? "Price Completed" : "Edit Price Special"}</button>
+          { props.editable && (
+            <div>
+              <input
+                type="text"
+                value={props.featurePrice}
+                onChange={props.handlePriceChange}
+              />
+            </div>
+          )}
+        
       </div>
       )}
       <h3>Vehicles available from A to Z are: </h3>
