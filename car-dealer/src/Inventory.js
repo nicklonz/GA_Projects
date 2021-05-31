@@ -27,7 +27,7 @@ const Inventory = (props) => {
           { props.editable && (
             <div>
               <input
-                type="text"
+                type= "number"
                 value={props.featurePrice}
                 onChange={props.handlePriceChange}
               />
