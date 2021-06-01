@@ -57,8 +57,9 @@ class App extends Component {
   }
 
   handlePriceChange = (event) => {
+    const featurePrice = parseInt(event.target.value);
     this.setState({
-      featurePrice: event.target.value
+      featurePrice
     })
   }
 
