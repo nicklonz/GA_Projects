@@ -2,14 +2,13 @@ import React from 'react';
 
 const Input = (props) => {
   return (
-      <from>
-        <br></br>
-        <label for="zip">Enter Zip Code:   </label>
-        <br></br><br></br>
-        <input type="text" id="zip" placeholder="Fantasy Island Zip Code"/>
+      <form>
+        <h2>Super Weather App</h2>
+        <h3><label for="zip">Enter Zip Code:   </label></h3>
+        <input type="text" id="zip" placeholder="Fantasy Island Zip Code"nonChange={props.handleChange}/>
         <br></br><br></br>
         <input type="submit" value="GET YOUR WEATHER!!!" />
-      </from>
+      </form>
   )
 }
 
