@@ -10,7 +10,7 @@ const WeatherWrapper = (props) => {
         handleSubmit={props.handleSubmit}
         errorText={props.errorText}
       />
-      {props.state.weather && <WeatherCard weather={this.state.weatherData} />}
+      {props.weatherData && <WeatherCard weather={props.weatherData} />}
     </>
   )
 }
