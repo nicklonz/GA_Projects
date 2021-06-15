@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 import React, { Component } from 'react';
-import Input from './components/Input';
-import WeatherCard from './components/WeatherCard';
+import { Route, Link } from 'react-router-dom';
+
+import WeatherWrapper from './components/WeatherWrapper';
+import Profile from './components/Profile';
 
 import { fetchData } from './services/weather';
 
@@ -26,18 +28,26 @@ class App extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     const weatherData = await fetchData(this.state.value);
-  //this.setState({ weatherData: weatherData })
     this.setState({ weatherData });
   }
 
   render() {
     return (
       <div className="App">
-        <Input 
-          handleChange={this.handleChange} 
-          handleSubmit={this.handleSubmit} 
-        />
-        { this.state.weatherData && <WeatherCard weather={this.state.weatherData} /> }
+        <nav>
+          <Link to="/profile">Profile</Link><br></br>
+          <Link to="/weather">Weather</Link>
+        </nav>
+        <Route path="/profile" render={() =>
+          <Profile/>
+        } />
+        <Route path="/weather" render={() =>
+          <WeatherWrapper
+            handleSubmit={this.handleSubmit}
+            handleChange={this.handleChange}
+            weatherData={this.state.weatherData}
+          />
+        } />
       </div>
     );
   }
