@@ -4,8 +4,9 @@ const CreateNewPost = props => {
     <>
     <section className="create-post">
       <form onSubmit={props.savePost}>
-        <h1>Create New Post</h1>
-        <input
+        <h1>Create New MinTicle</h1>
+
+       <input
           type="text"
           onChange={props.savePostTitleToState}
           placeholder="Title"
@@ -26,7 +27,7 @@ const CreateNewPost = props => {
         <br />
         <br />
         <section className="button-wrapper">
-        <button className="button">Save Post</button></section>
+        <button className="button">Save and Start</button></section>
       </form>
       </section>
     </>

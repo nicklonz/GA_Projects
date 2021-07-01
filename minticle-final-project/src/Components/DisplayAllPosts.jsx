@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import CreateNewPost from "./CreateNewPost";
 import Post from "./Post";
-import ModifyPost from "./ModifyPost"
+import ModifyPost from "./ModifyPost";
+
 const DisplayAllPosts = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -97,12 +98,19 @@ const DisplayAllPosts = () => {
     <>
       {!allPosts.length ? (
         <section className="no-post">
-          <h1>No Post Found!</h1>
-          <h3>There is nothing to see here.</h3>
+
+          <img src={"./public/logo.png"}/>
+
+          <h1>Welcome to MinTicle</h1>
+          <h3>There is nothing to see here yet.</h3>
+          <h3>There are 86,400 seconds in a day.
+          <h3>Make them count. </h3>
+          </h3>
+
           <br />
       <br />
           <section className="button-wrapper">
-      <button onClick={toggleCreateNewPost} className="button">Create New</button>
+      <button onClick={toggleCreateNewPost} className="button">Write Something</button>
       </section>
         </section>
       ) : (
