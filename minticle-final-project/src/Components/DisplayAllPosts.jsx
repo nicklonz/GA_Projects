@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import CreateNewPost from "./CreateNewPost";
 import Post from "./Post";
 import ModifyPost from "./ModifyPost";
+import logo from './logo.svg';
 
 const DisplayAllPosts = () => {
   const [title, setTitle] = useState("");
@@ -99,7 +100,7 @@ const DisplayAllPosts = () => {
       {!allPosts.length ? (
         <section className="no-post">
 
-          <img src={"./public/logo.png"}/>
+            <img src={logo} className="App-logo" alt="logo" />
 
           <h1>Welcome to MinTicle</h1>
           <h3>There is nothing to see here yet.</h3>
@@ -114,7 +115,7 @@ const DisplayAllPosts = () => {
       </section>
         </section>
       ) : (
-      <div><h1>All Posts</h1>
+      <div><h1>All MinTicles</h1>
         <section className="all-post">
         {allPosts.map(eachPost => {
           return (

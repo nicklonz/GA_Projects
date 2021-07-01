@@ -1,10 +1,30 @@
 import React from "react";
+
+function App() {
+  const [counter, setCounter] = React.useState(60);
+
+
+  React.useEffect(() => {
+    const timer =
+      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+    return () => clearInterval(timer);
+  }, [counter]);
+
+  return (
+    <div className="App">
+      <div>Countdown: {counter}</div>
+    </div>
+  );
+}
+
 const CreateNewPost = props => {
   return (
     <>
     <section className="create-post">
       <form onSubmit={props.savePost}>
         <h1>Create New MinTicle</h1>
+
+        
 
        <input
           type="text"
