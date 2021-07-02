@@ -28,7 +28,7 @@ const CreateNewPost = props => {
         <br />
         <br />
         <section className="button-wrapper">
-        <button className="button">Save and Start</button></section>
+        <button className="button">Start Countdown</button></section>
       </form>
       </section>
     </>
