@@ -6,8 +6,8 @@ import ClockElement from "./Components/ClockElement";
 const App = ( ) => {
   return (
     <div>
-      <ClockElement />
       <DisplayAllPosts />
+      <h2><ClockElement /></h2>
     </div>
   );
 };
