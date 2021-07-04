@@ -7,7 +7,7 @@ const App = ( ) => {
   return (
     <div>
       <DisplayAllPosts />
-      <h2><ClockElement /></h2>
+      <ClockElement />
     </div>
   );
 };

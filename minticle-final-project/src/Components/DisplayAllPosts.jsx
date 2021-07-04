@@ -112,7 +112,7 @@ const DisplayAllPosts = () => {
           <br />
       <br />
           <section className="button-wrapper">
-      <button onClick={toggleCreateNewPost} className="button">Write Something</button>
+      <button onClick={toggleCreateNewPost} className="button">Start Here</button>
       </section>
         </section>
       ) : (

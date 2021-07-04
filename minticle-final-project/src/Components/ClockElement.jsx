@@ -12,7 +12,7 @@ function ClockElement() {
 
   return (
     <div className="App">
-      <div>Countdown: {counter}</div>
+      <h3>Countdown: {counter}</h3>
     </div>
   );
 }
