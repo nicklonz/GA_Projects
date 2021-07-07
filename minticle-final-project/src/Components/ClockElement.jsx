@@ -12,7 +12,7 @@ function ClockElement() {
 
   return (
     <div className="App">
-      <h3>Countdown: {counter}</h3>
+      <h3>Countdown: {counter.toLocaleString()}</h3>
     </div>
   );
 }
