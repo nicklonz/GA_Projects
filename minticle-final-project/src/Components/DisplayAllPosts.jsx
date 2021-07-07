@@ -3,7 +3,6 @@ import CreateNewPost from "./CreateNewPost";
 import Post from "./Post";
 import ModifyPost from "./ModifyPost";
 import logo from './logo.svg';
-import ClockElement from "./ClockElement";
 
 const DisplayAllPosts = () => {
   const [title, setTitle] = useState("");

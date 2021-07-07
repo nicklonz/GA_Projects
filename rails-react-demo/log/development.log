@@ -553,3 +553,58 @@ Processing by Api::V1::TodoItemsController#index as JSON
 Completed 200 OK in 21ms (Views: 7.3ms | ActiveRecord: 6.5ms | Allocations: 4110)
 
 
+Started GET "/" for ::1 at 2021-07-04 09:51:40 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PagesController#my_todo_items as HTML
+  Rendering pages/my_todo_items.html.erb within layouts/application
+  Rendered pages/my_todo_items.html.erb within layouts/application (Duration: 2.9ms | Allocations: 205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.5ms | Allocations: 351)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 179)
+Completed 200 OK in 1470ms (Views: 1460.4ms | ActiveRecord: 0.0ms | Allocations: 1429393)
+
+
+Started GET "/api/v1/todo_items" for ::1 at 2021-07-04 09:51:42 -0400
+Processing by Api::V1::TodoItemsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/v1/todo_items/index.json.jbuilder
+  [1m[36mTodoItem Load (1.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."user_id" = $1 ORDER BY "todo_items"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/api/v1/todo_items/index.json.jbuilder:1
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.7ms | Allocations: 109)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 1.2ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.1ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.1ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.1ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.1ms | Allocations: 26)
+  Rendered api/v1/todo_items/index.json.jbuilder (Duration: 33.7ms | Allocations: 6527)
+Completed 200 OK in 58ms (Views: 29.7ms | ActiveRecord: 11.2ms | Allocations: 13269)
+
+
+Started GET "/" for ::1 at 2021-07-04 09:51:48 -0400
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PagesController#my_todo_items as HTML
+  Rendering pages/my_todo_items.html.erb within layouts/application
+  Rendered pages/my_todo_items.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 17)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 4441)
+
+
+Started GET "/api/v1/todo_items" for ::1 at 2021-07-04 09:51:48 -0400
+Processing by Api::V1::TodoItemsController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering api/v1/todo_items/index.json.jbuilder
+  [1m[36mTodoItem Load (1.6ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."user_id" = $1 ORDER BY "todo_items"."created_at" DESC[0m  [["user_id", 1]]
+  ↳ app/views/api/v1/todo_items/index.json.jbuilder:1
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.2ms | Allocations: 28)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.2ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.2ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.2ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.3ms | Allocations: 26)
+  Rendered api/v1/todo_items/_todo_item.json.jbuilder (Duration: 0.2ms | Allocations: 26)
+  Rendered api/v1/todo_items/index.json.jbuilder (Duration: 8.4ms | Allocations: 1935)
+Completed 200 OK in 20ms (Views: 7.4ms | ActiveRecord: 3.0ms | Allocations: 4088)
+
+

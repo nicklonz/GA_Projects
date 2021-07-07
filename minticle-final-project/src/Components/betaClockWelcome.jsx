@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ClockElement() {
+function ClockWelcome() {
   const [counter, setCounter] = React.useState(86400);
 
 
@@ -17,4 +17,4 @@ function ClockElement() {
   );
 }
 
-export default ClockElement;
+export default ClockWelcome;
